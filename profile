@@ -1,8 +1,10 @@
-source "paths.sh"
-source "aliases.sh"
-source "prompt.sh"
-for f in $(ls -1 functions)
-do source "functions/$f"
+BASEDIR=$(dirname "$BASH_SOURCE")
+
+source "$BASEDIR/paths.sh"
+source "$BASEDIR/aliases.sh"
+source "$BASEDIR/prompt.sh"
+for f in $(ls -1 "$BASEDIR/functions")
+do source "$BASEDIR/functions/$f"
 done
 
 # Open path to Finder frontmost window
