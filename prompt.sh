@@ -19,14 +19,14 @@ host() {
 }
 
 directory() {
-	local pwd=$(pwd)
+	local pwd="$(pwd)"
 	
 	echo -n $purplef
 	if [[ $pwd == $HOME ]]
 	then echo -n $boldon'~'
 	elif [[ $pwd == '/' ]]
 	then echo -n $boldon'/'
-	else echo -n "$(basename $(dirname $pwd))/$boldon$(basename $pwd)"
+	else echo -n $(basename $(dirname "$pwd"))/$boldon$(basename "$pwd")
 	fi
 	echo -n $reset
 }
