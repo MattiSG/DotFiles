@@ -26,7 +26,7 @@ directory() {
 	then echo -n $boldon'~'
 	elif [[ $pwd == '/' ]]
 	then echo -n $boldon'/'
-	else echo -n $(basename $(dirname "$pwd"))/$boldon$(basename "$pwd")
+	else echo -n $(basename "$(dirname "$pwd")")/$boldon$(basename "$pwd")
 	fi
 	echo -n $reset
 }
