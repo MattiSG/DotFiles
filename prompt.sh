@@ -44,4 +44,4 @@ function gitinfo() {
 }
 
 
-export PS1='$(user)$(host)$(directory)$(gitinfo)	› '
+export PS1='$(user)$(host)$(directory)$(gitinfo) › '
