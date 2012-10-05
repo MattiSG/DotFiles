@@ -10,7 +10,7 @@ _edit() {
 		touch $1
 	fi
 	
-	open -a $EDITOR $1	
+	open -a "$EDITOR" $1	
 }
 
 # Opens all given files with the set EDITOR, creating them if they don't exist.
