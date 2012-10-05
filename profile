@@ -10,7 +10,7 @@ done
 # Open path to Finder frontmost window
 finder
 
-export EDITOR=/Applications/Smultron.app/Contents/MacOS/Smultron
+export EDITOR='/Applications/Sublime Text 2.app/Contents/MacOS/Sublime Text 2'
 
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
