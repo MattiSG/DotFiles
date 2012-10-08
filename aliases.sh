@@ -11,7 +11,7 @@ alias mysql="/usr/local/mysql/bin/mysql || echo MySQL was not found in /usr/loca
 # Edit the profile file
 alias profile="edit $(dirname $BASH_SOURCE)/profile"
 # Get Git root
-alias groot="git rev-parse --show-cdup || pwd"
+alias groot='echo ./$(git rev-parse --show-cdup) || pwd'
 # Go to Git root
 alias gd='[ ! -z `git rev-parse --show-cdup` ] && cd `groot`'
 # Colorize grep output
@@ -19,7 +19,7 @@ alias grep="grep --color=auto"
 # Reload profile
 alias reload="source ~/.profile"
 # OSX: open current directory with GitX
-alias gitx="open -a GitX `groot`"
+alias gitx='open -a GitX `groot`'
 # OSX: hide file in Finder
 alias hide="SetFile -a V"
 # OSX: show file in Finder
