@@ -9,7 +9,7 @@ alias mkex="chmod u+x"
 # MySQL server
 alias mysql="/usr/local/mysql/bin/mysql || echo MySQL was not found in /usr/local/mysql/bin  :-S"
 # Edit the profile file
-alias profile="edit ~/.profile"
+alias profile="edit $(dirname $BASH_SOURCE)/profile"
 # Go to Git root
 alias gd='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 # Colorize grep output
