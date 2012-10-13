@@ -4,18 +4,18 @@ user() {
 	echo -n $boldon
 	if [[ $USER == "matti" ]]
 	then echo -n $greenf"∵"
-	else echo -n $redf$USER"@"
+	else echo -n "$redf$USER @"
 	fi
-	echo -n $reset
+	echo -n "$reset"
 }
 
 host() {
 	echo -n $boldon
 	if [[ $HOSTNAME == "MBP-Alcmene.local" ]]
-	then echo -n $greenf"∴ "
-	else echo -n "$yellowf$HOSTNAME:"
+	then echo -n $greenf"∴"
+	else echo -n " $yellowf$HOSTNAME"
 	fi
-	echo -n $reset
+	echo -n " $reset"
 }
 
 directory() {
@@ -26,7 +26,8 @@ directory() {
 	then echo -n $boldon'~'
 	elif [[ $pwd == '/' ]]
 	then echo -n $boldon'/'
-	else echo -n $(basename "$(dirname "$pwd")")/$boldon$(basename "$pwd")
+	else
+		echo -n $(basename "$(dirname "$pwd")")/$boldon$(basename "$pwd")
 	fi
 	echo -n $reset
 }
@@ -44,4 +45,4 @@ function gitinfo() {
 }
 
 
-export PS1='$(user)$(host)$(directory)$(gitinfo) › '
+export PS1='$(user)$(host)$(directory)$(gitinfo)\n› '
