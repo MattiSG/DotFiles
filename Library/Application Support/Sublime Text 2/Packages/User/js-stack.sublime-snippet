@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+console.error(new Error('-> $1').stack);
+]]></content>
+	<tabTrigger>stack</tabTrigger>
+	<scope>source.js</scope>
+</snippet>
