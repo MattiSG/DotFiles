@@ -1,0 +1,10 @@
+# from http://ariya.ofilabs.com/2012/10/javascript-validator-with-esprima.html
+
+files=$(git diff-index --name-only HEAD | grep -P '\.js$')
+for file in $files; do
+  esvalidate $file
+  if [ $? -eq 1 ]; then
+    echo "Syntax error: $file"
+    exit 1
+  fi
+done
