@@ -35,7 +35,7 @@ alias window="open ."
 
 # Git shortcuts
 alias commit="git commit"
-alias status="git status"
+alias status="git status -sb"
 alias push="git push"
 alias pull="git pull"
 alias log="git log"
