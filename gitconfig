@@ -12,7 +12,7 @@
 	# Commit all changes
 	ca = !git add -A && git commit -av
 	# Switch to a branch, creating it if necessary
-	go = checkout -B
+	go = checkout -b
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
 	branches = branch -a
@@ -28,7 +28,7 @@
 
 [help]
 	autocorrect = 1
-	
+
 [user]
 	name = Matti Schneider
 	email = hi@mattischneider.fr
