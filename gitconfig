@@ -26,6 +26,9 @@
 	# Blame ignoring whitespace and moved lines
 	who = blame -MwCCC
 
+[diff]
+	external = ~/Dev/Projets/DotFiles/filemerge-for-git.sh
+
 [help]
 	autocorrect = 1
 
