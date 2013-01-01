@@ -32,6 +32,10 @@ directory() {
 	echo -n $reset
 }
 
+timestamp() {
+	echo -n "⦑ $(date '+%H:%M:%S') "
+}
+
 
 function parse_git_dirty() {
 	[[ $(git status 2> /dev/null | wc -l) != "       2" ]] && echo '⊛'
@@ -45,4 +49,4 @@ function gitinfo() {
 }
 
 
-export PS1='$(user)$(host)$(directory)$(gitinfo)\n› '
+export PS1='$(user)$(host)$(directory)$(gitinfo) $(timestamp)\n› '
