@@ -21,4 +21,8 @@ shopt -s cdspell
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
+# Prevent commands beginning with a space to be added to the history
+# Credit: http://stackoverflow.com/questions/640403
+HISTCONTROL='ignoredups:ignorespace'
+
 echo "								Woudzigouga Bougou D'Négué !"
