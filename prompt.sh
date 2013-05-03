@@ -4,7 +4,7 @@ user() {
 	echo -n $boldon
 	if [[ $USER == "matti" ]]
 	then echo -n $greenf"∵"
-	else echo -n "$redf$USER @"
+	else echo -n "$redf$USER"
 	fi
 	echo -n "$reset"
 }
