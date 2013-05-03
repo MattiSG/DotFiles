@@ -1,4 +1,4 @@
-source $(dirname "$BASH_SOURCE")/../MSGShellUtils/ui.sh
+source $(dirname "$BASH_SOURCE")/lib/MSGShellUtils/ui.sh
 
 user() {
 	echo -n $boldon

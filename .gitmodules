@@ -1,0 +1,3 @@
+[submodule "lib/MSGShellUtils"]
+	path = lib/MSGShellUtils
+	url = git@github.com:MattiSG/MSGShellUtils.git
