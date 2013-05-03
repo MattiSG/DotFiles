@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $(dirname "$BASH_SOURCE")/../MSGShellUtils/paths.sh
+source $(dirname "$BASH_SOURCE")/lib/MSGShellUtils/paths.sh
 
 oldPath="$(removeTrailingSlash $1)"
 newPath="$(removeTrailingSlash $2)"
