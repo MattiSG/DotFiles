@@ -25,6 +25,9 @@
 	amend = commit --amend
 	# Blame ignoring whitespace and moved lines
 	who = blame -MwCCC
+	# Save current status to a stash without going back to previous commit
+	# Credit: http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 
 [diff]
 	external = ~/Dev/Projets/DotFiles/filemerge-for-git.sh
