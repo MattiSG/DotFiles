@@ -1,9 +1,12 @@
 {
 	"installed_packages":
 	[
+		"Alignment",
+		"Codeivate",
 		"CoffeeScript",
 		"Color Highlighter",
 		"Dotfiles Syntax Highlighting",
+		"Element Finder",
 		"HTML5",
 		"Inc-Dec-Value",
 		"Package Control",

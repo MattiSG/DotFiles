@@ -4,7 +4,11 @@
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"draw_white_space": "all",
 	"font_face": "PanicSans",
-	"font_size": 14.0,
+	"font_size": 15.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"indent_subsequent_lines": false,
 	"shift_tab_unindent": true,
 	"spell_check": true,
