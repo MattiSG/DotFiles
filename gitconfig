@@ -86,3 +86,5 @@
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*	# allow checking out pull requests directly <https://gist.github.com/piscisaureus/3342247>
 [push]
 	default = current
+[rebase]
+	autosquash = true
