@@ -27,7 +27,7 @@
 	who = blame -MwCCC
 	# Save current status to a stash without going back to previous commit
 	# Credit: http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
-	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+	save = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 
 [help]
 	autocorrect = 1
