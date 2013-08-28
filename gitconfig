@@ -28,6 +28,8 @@
 	# Save current status to a stash without going back to previous commit
 	# Credit: http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
 	save = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+	# Delete a branch both locally and remotely
+	drop = !"git branch -D $1; git push origin --delete"
 
 [help]
 	autocorrect = 1
