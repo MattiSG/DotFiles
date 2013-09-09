@@ -37,7 +37,6 @@ alias window="open ."
 alias commit="git commit"
 alias status="git status -sb"
 alias push="git push --follow-tags"
-alias pull="git pull && git submodule sync && git submodule update --init --recursive"
 alias log="git log"
 
 #######################
