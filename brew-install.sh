@@ -75,3 +75,13 @@ echo "done"
 echo -n "Allow group members to write inside this directory…"
 sudo chmod -R g+w /Library/Caches/Homebrew
 echo "done"
+
+# Install tools in other languages
+
+npm install -g growl
+npm install -g watai
+
+# Additional elements
+
+echo 'Installing Sublime Text Package Control…'
+curl -# https://sublime.wbond.net/Package%20Control.sublime-package -o ~/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/Package\ Control.sublime-package
