@@ -1,8 +1,11 @@
-# Install all usual packages
+# Install homebrew
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
-if ! brew doctor
-then exit 1
-fi
+brew update
+
+brew doctor || exit 1
+
+# Install all usual packages
 
 brew install bash
 brew install git
