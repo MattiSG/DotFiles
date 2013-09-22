@@ -9,8 +9,8 @@ brew doctor || exit 1
 
 brew install bash
 brew install git
-brew install gibo
-brew install image-magick
+brew install imagemagick
 brew install chromedriver
 brew install jsdoc-toolkit
 brew install selenium-server-standalone
+brew install node
