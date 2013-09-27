@@ -1,0 +1,5 @@
+# Speed up connections by keeping them alive
+# Credit: http://interrobeng.com/2013/08/25/speed-up-git-5x-to-50x/
+ControlMaster auto
+ControlPath /tmp/%r@%h:%p
+ControlPersist yes
