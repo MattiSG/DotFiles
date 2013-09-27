@@ -15,6 +15,11 @@ do
 	fi
 done
 
-echo "source $source/profile" > ~/.profile
+if [[ -f ~/.profile ]]
+then echo ".profile already exists. Refusing to overwrite it."
+else
+	echo "source $source/profile" > ~/.profile
+	echo "Linked .profile"
+fi
 
 ./brew-install.sh
