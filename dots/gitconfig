@@ -13,8 +13,8 @@
 	ca = !git add -A && git commit -av
 	# Switch to a branch, creating it if necessary
 	go = checkout -b
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
+	# Show verbose output about tags
+	tags = tag -l -n99
 	branches = branch -a
 	remotes = remote -v
 	# Credit an author on the latest commit
