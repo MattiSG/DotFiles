@@ -68,6 +68,13 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 systemsetup -setrestartfreeze on
 
 ###############################################################################
+# System preferences                                                          #
+###############################################################################
+
+# Present system preferences sorted by alphabetical order instead of categories
+defaults write com.apple.systempreferences ShowAllMode -bool true
+
+###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
