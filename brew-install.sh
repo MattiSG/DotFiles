@@ -14,6 +14,8 @@ brew install chromedriver
 brew install jsdoc-toolkit
 brew install selenium-server-standalone
 brew install node
+brew install rbenv
+brew install ruby-build
 
 # Install brew-cask
 
@@ -80,6 +82,7 @@ echo "done"
 
 npm install -g growl
 npm install -g watai
+rbenv install 2.0.0-p247
 
 # Additional elements
 
