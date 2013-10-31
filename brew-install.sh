@@ -43,6 +43,7 @@ brew cask install macpardeluxe
 brew cask install omni-graffle-pro
 brew cask install pacifist
 brew cask install postgres
+brew cask install sauce
 brew cask install sitesucker
 brew cask install skype
 brew cask install sublime-text
