@@ -67,6 +67,12 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Restart automatically if the computer freezes
 systemsetup -setrestartfreeze on
 
+# Disable beeps on sound level change
+defaults write -g com.apple.sound.beep.feedback -int 0
+
+# Disable UI sounds
+defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -int 0
+
 ###############################################################################
 # System preferences                                                          #
 ###############################################################################
