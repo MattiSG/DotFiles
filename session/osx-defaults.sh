@@ -6,6 +6,11 @@
 # General UI/UX                                                               #
 ###############################################################################
 
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Set highlight color to a specific yellow
+defaults write NSGlobalDomain AppleHighlightColor -string '0.984300 0.929400 0.450900'
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -32,14 +37,8 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
-# Disable Resume system-wide
-#defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
-
-# Disable automatic termination of inactive apps
-#defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
-
 # Disable the crash reporter
-#defaults write com.apple.CrashReporter DialogType -string "none"
+defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
@@ -153,6 +152,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
@@ -161,6 +163,12 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Enable spring loading for directories
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+
+# Remove the spring loading delay for directories
+defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -206,7 +214,7 @@ defaults write com.apple.Finder FXPreferredViewStyle -string "clmv"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
+#defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
@@ -224,16 +232,24 @@ unset file
 ###############################################################################
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
-defaults write com.apple.dock mouse-over-hilte-stack -bool true
+defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 23 pixels
 defaults write com.apple.dock tilesize -int 23
+
+# Minimize windows into their application’s icon
+#defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
 #defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
+
+# Wipe all (default) app icons from the Dock
+# This is only really useful when setting up a new Mac, or if you don’t use
+# the Dock to launch apps.
+#defaults write com.apple.dock persistent-apps -array
 
 # Don’t animate opening applications from the Dock
 #defaults write com.apple.dock launchanim -bool false
@@ -245,11 +261,17 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # (i.e. use the old Exposé behavior instead)
 defaults write com.apple.dock expose-group-by-app -bool false
 
+# Disable Dashboard
+#defaults write com.apple.dashboard mcx-disabled -bool true
+
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
 # Remove the auto-hiding Dock delay
-#defaults write com.apple.Dock autohide-delay -float 0
+#defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 #defaults write com.apple.dock autohide-time-modifier -float 0
 
@@ -271,6 +293,17 @@ find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
 # Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock wvous-tl-modifier -int 0
@@ -321,6 +354,31 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 ###############################################################################
+# Mail                                                                        #
+###############################################################################
+
+# Disable send and reply animations in Mail.app
+defaults write com.apple.mail DisableReplyAnimations -bool true
+defaults write com.apple.mail DisableSendAnimations -bool true
+
+# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
+#defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
+
+# Display emails in threaded mode, sorted by date (oldest at the top)
+#defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
+#defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
+#defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
+
+# Disable inline attachments (just show the icons)
+#defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+
+# Disable automatic spell checking
+#defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
+
+###############################################################################
 # iTunes                                                                      #
 ###############################################################################
 
@@ -344,17 +402,6 @@ defaults write com.apple.iTunes disableRadio -bool true
 # open `Contents/Resources/your-language.lproj/Localizable.strings`, and look
 # for `kHiddenMenuItemTargetSearch`.
 #defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
-
-###############################################################################
-# Mail                                                                        #
-###############################################################################
-
-# Disable send and reply animations in Mail.app
-#defaults write com.apple.Mail DisableReplyAnimations -bool true
-#defaults write com.apple.Mail DisableSendAnimations -bool true
-
-# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 ###############################################################################
 # Terminal                                                                    #
@@ -389,7 +436,8 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write com.apple.dashboard devmode -bool true
 
 # Use plain text mode for new TextEdit documents
-defaults write com.apple.TextEdit RichText -int 0
+#defaults write com.apple.TextEdit RichText -int 0
+
 # Open and save files as UTF-8 in TextEdit
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
@@ -398,6 +446,72 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
+###############################################################################
+# Messages                                                                    #
+###############################################################################
+
+# Disable automatic emoji substitution (i.e. use plain text smileys)
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+
+# Disable smart quotes as it’s annoying for messages that contain code
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+
+# Disable continuous spell checking
+#defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+
+###############################################################################
+# SizeUp.app                                                                  #
+###############################################################################
+
+# Start SizeUp at login
+defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
+
+# Don’t show the preferences window on next start
+defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
+
+###############################################################################
+# Transmission.app                                                            #
+###############################################################################
+
+# Use `~/Documents/Torrents` to store incomplete downloads
+defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/BitTorrent"
+
+# Don’t prompt for confirmation before downloading
+defaults write org.m0k.transmission DownloadAsk -bool false
+
+# Trash original torrent files
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+# Hide the donate message
+defaults write org.m0k.transmission WarningDonate -bool false
+# Hide the legal disclaimer
+defaults write org.m0k.transmission WarningLegal -bool false
+
+###############################################################################
+# Twitter.app                                                                 #
+###############################################################################
+
+# Disable smart quotes as it’s annoying for code tweets
+defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
+
+# Show the app window when clicking the menu icon
+#defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
+
+# Enable the hidden ‘Develop’ menu
+#defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
+
+# Open links in the background
+defaults write com.twitter.twitter-mac openLinksInBackground -bool true
+
+# Allow closing the ‘new tweet’ window by pressing `Esc`
+#defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
+
+# Show full names rather than Twitter handles
+defaults write com.twitter.twitter-mac ShowFullNames -bool true
+
+# Hide the app in the background if it’s not the front-most window
+#defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #

@@ -18,6 +18,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # sudo scutil --set LocalHostName "MBP-Alcmene"
 # sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MBP-Alcmene"
 
+# Set standby delay to 5 minutes
+sudo pmset -a standbydelay 300
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
