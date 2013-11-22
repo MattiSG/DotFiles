@@ -22,4 +22,23 @@ else
 	echo "Linked .profile"
 fi
 
-./brew-install.sh
+for script in $(ls $source/session)
+do
+	echo "Executing $script for the current session"
+	bash $source/session/$script
+done
+
+read -p 'Has this machine already been set up? [Y/n]' -n 1 machineAlreadySetUp
+
+if [[ $machineAlreadySetUp != 'n' ]]
+then
+	echo 'Nothing to do for the machine'
+else
+	for script in $(ls $source/machine)
+	do
+		echo "Executing $script for the whole machine"
+		bash $source/machine/$script
+	done
+fi
+
+echo 'Done'

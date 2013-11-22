@@ -1,0 +1,2 @@
+echo 'Installing Sublime Text Package Control…'
+curl -# https://sublime.wbond.net/Package%20Control.sublime-package -o ~/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/Package\ Control.sublime-package

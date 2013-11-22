@@ -2,21 +2,10 @@
 
 # ~/.osx — Adapted from http://mths.be/osx
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set computer name (as done via System Preferences → Sharing)
-# sudo scutil --set ComputerName "MBP Alcmene"
-# sudo scutil --set HostName "MBP Alcmene"
-# sudo scutil --set LocalHostName "MBP-Alcmene"
-# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MBP-Alcmene"
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -58,14 +47,7 @@ defaults write com.apple.helpviewer DevMode -bool true
 # Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
 # Commented out, as this is known to cause problems when saving files in
 # Adobe Illustrator CS5 :(
-#echo "0x08000100:0" > ~/.CFUserTextEncoding
-
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-# Restart automatically if the computer freezes
-systemsetup -setrestartfreeze on
+echo "0x08000100:0" > ~/.CFUserTextEncoding
 
 # Disable beeps on sound level change
 defaults write -g com.apple.sound.beep.feedback -int 0
@@ -84,9 +66,8 @@ defaults write com.apple.systempreferences ShowAllMode -bool true
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-# Trackpad: enable tap to click for this user and for the login screen
+# Trackpad: enable tap to click for this user
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
@@ -146,9 +127,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
-# Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
 # Finder                                                                      #
@@ -403,9 +381,6 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# Disable local Time Machine backups
-#hash tmutil &> /dev/null && sudo tmutil disablelocal
-
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
 ###############################################################################
@@ -428,9 +403,4 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" \
-	"Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" "Twitter" \
-	"iCal" "iTunes"; do
-	killall "$app" > /dev/null 2>&1
-done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo "Done. Note that these changes will be applied after modified applications are restarted, and some require a logout to take effect."

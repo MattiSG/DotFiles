@@ -1,5 +1,5 @@
 # Install homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+which brew > /dev/null || ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 brew update
 
@@ -84,8 +84,3 @@ echo "done"
 npm install -g growl
 npm install -g watai
 rbenv install 2.0.0-p247
-
-# Additional elements
-
-echo 'Installing Sublime Text Package Control…'
-curl -# https://sublime.wbond.net/Package%20Control.sublime-package -o ~/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/Package\ Control.sublime-package
