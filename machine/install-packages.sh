@@ -38,7 +38,7 @@ brew cask install gitx-l
 brew cask install growlnotify
 brew cask install handbrake
 brew cask install imageoptim
-brew cask install libre-office
+brew cask install libreoffice
 brew cask install macpardeluxe
 brew cask install omni-graffle-pro
 brew cask install pacifist
