@@ -6,6 +6,7 @@ DOTFILES_DIR="$(pwd)"
 
 actionForAllFiles=''
 
+# Inspired by <https://github.com/MoOx/dotfiles/blob/master/bin/dotfiles>
 function link() {	# $1 = source file; $2 = target file
 	local source="$1"
 	local target="$2"
