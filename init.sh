@@ -22,12 +22,6 @@ else
 	echo "Linked .profile"
 fi
 
-for script in $(ls $source/session)
-do
-	echo "Executing $script for the current session"
-	bash $source/session/$script
-done
-
 read -p 'Has this machine already been set up? [Y/n]' -n 1 machineAlreadySetUp
 
 if [[ $machineAlreadySetUp != 'n' ]]
@@ -42,5 +36,11 @@ else
 		bash $source/machine/$script
 	done
 fi
+
+for script in $(ls $source/session)
+do
+	echo "Executing $script for the current session"
+	bash $source/session/$script
+done
 
 echo 'Done'
