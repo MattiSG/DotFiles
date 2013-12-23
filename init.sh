@@ -34,6 +34,8 @@ if [[ $machineAlreadySetUp != 'n' ]]
 then
 	echo 'Nothing to do for the machine'
 else
+	xcode-select --install	# install CLI tools; credit: MoOx
+
 	for script in $(ls $source/machine)
 	do
 		echo "Executing $script for the whole machine"
