@@ -8,8 +8,8 @@ function open() {
 	fi
 }
 
-# Open the given location current, or the current directory.
+# Open the given element, or the current directory, delegating handler selection to the OS.
 # Credit: https://github.com/MoOx/dotfiles/blob/master/backpack/functions/os
 function o() {
-	open ${@:-.}
+	open "${@:-.}"
 }
