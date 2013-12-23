@@ -28,7 +28,23 @@ if [[ $machineAlreadySetUp != 'n' ]]
 then
 	echo 'Nothing to do for the machine'
 else
+	echo "Opening AppStore for manual install"
+	open -a "App Store"
+
+	echo "Waiting for Xcode to be installed…"
+
+	while ! which -s xcode-select
+	do
+		sleep 1
+		echo -n '.'
+	done
+
+	echo "Xcode is installed"
+	echo "Installing CLI tools…"
+
 	xcode-select --install	# install CLI tools; credit: MoOx
+
+	echo "CLI tools installed"
 
 	for script in $(ls $source/machine)
 	do
