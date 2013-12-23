@@ -30,8 +30,6 @@ alias spotlight="mdfind -onlyin ."
 alias ql="qlmanage -p 2>/dev/null"
 # OSX: cd to frontmost Finder window
 alias finder='cd "$(osascript -e "tell application \"Finder\" to if window 1 exists then if target of window 1 as string is not \":\" then get POSIX path of (target of window 1 as alias)")"'
-# OSX: open cwd in a new Finder window
-alias window="open ."
 
 # Git shortcuts
 alias commit="git commit"
