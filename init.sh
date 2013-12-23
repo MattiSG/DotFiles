@@ -4,13 +4,6 @@ source="$(pwd)"
 git submodule sync
 git submodule update --init --recursive
 
-if [[ -f ~/.profile ]]
-then echo ".profile already exists. Refusing to overwrite it."
-else
-	echo "source $source/profile" > ~/.profile
-	echo "Linked .profile"
-fi
-
 read -p 'Has this machine already been set up? [Y/n]' -n 1 machineAlreadySetUp
 
 if [[ $machineAlreadySetUp != 'n' ]]
