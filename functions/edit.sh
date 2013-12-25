@@ -9,8 +9,8 @@ _edit() {
 		mkdir -p "$(dirname "$*")" 2> /dev/null
 		touch "$*"
 	fi
-	
-	open -a "$EDITOR" "$*"
+
+	open -a "Sublime Text 2" "$*"
 }
 
 # Opens all given files with the set EDITOR, creating them if they don't exist.
