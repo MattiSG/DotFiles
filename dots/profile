@@ -3,9 +3,10 @@
 SOURCE=`readlink -n "$BASH_SOURCE" || echo $BASH_SOURCE`	# allow finding enclosing directory even if through a symlink
 BASEDIR="$(cd `dirname "$SOURCE"`/..; pwd)"
 
-source "$BASEDIR/paths.sh"
-source "$BASEDIR/aliases.sh"
-source "$BASEDIR/prompt.sh"
+for f in $(ls -1 "$BASEDIR/source/")
+do source "$BASEDIR/source/$f"
+done
+
 for f in $(ls -1 "$BASEDIR/functions")
 do source "$BASEDIR/functions/$f"
 done
