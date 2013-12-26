@@ -1,0 +1,14 @@
+# Meta editor configuration file
+# See more at editorconfig.org
+
+[*]
+indent_style             = tabs
+tab_width                = 4
+end_of_line              = lf
+charset                  = utf-8
+trim_trailing_whitespace = true
+insert_final_newline     = true
+
+[*.rb]
+indent_style             = spaces
+indent_size              = 2
