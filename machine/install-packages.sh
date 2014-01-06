@@ -35,7 +35,7 @@ brew cask install cyberduck
 brew cask install daisydisk
 brew cask install dropbox
 brew cask install fluid
-brew cask install gitx-l
+brew cask install gitx-rowanj
 brew cask install growlnotify
 brew cask install handbrake
 brew cask install imageoptim
