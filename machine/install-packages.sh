@@ -31,7 +31,7 @@ brew cask install opera
 brew cask install caffeine
 brew cask install carbon-copy-cloner
 brew cask install cyberduck
-brew cask install daisy-disk
+brew cask install daisydisk
 brew cask install dropbox
 brew cask install fluid
 brew cask install gitx-l
@@ -40,7 +40,7 @@ brew cask install handbrake
 brew cask install imageoptim
 brew cask install libreoffice
 brew cask install macpardeluxe
-brew cask install omni-graffle-pro
+brew cask install omnigraffle
 brew cask install pacifist
 brew cask install postgres
 brew cask install sauce
@@ -52,7 +52,7 @@ brew cask install transmission
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
-brew cask install x-quartz
+brew cask install xquartz
 brew cask install xscope
 
 # Prepare brew for multi-users setup
