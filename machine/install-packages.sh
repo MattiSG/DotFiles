@@ -21,6 +21,7 @@ brew install ruby-build
 
 brew tap phinze/homebrew-cask
 brew install brew-cask || brew upgrade brew-cask
+brew tap caskroom/versions
 
 # Install apps
 
