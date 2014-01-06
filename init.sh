@@ -31,14 +31,14 @@ else
 	for script in $(ls $source/machine)
 	do
 		echo "Executing $script for the whole machine"
-		bash $source/machine/$script
+		$source/machine/$script || exit 1
 	done
 fi
 
 for script in $(ls $source/session)
 do
 	echo "Executing $script for the current session"
-	bash $source/session/$script
+	$source/session/$script || exit 1
 done
 
 echo 'Done'
