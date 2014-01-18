@@ -16,6 +16,8 @@ alias groot='echo ./$(git rev-parse --show-cdup) || pwd'
 alias gd='[ ! -z `git rev-parse --show-cdup` ] && cd `groot`'
 # Colorize grep output
 alias grep="grep --color=auto"
+# sha any input
+alias sha="openssl sha1"
 # Reload profile
 alias reload="source ~/.profile"
 # OSX: open current directory with GitX
