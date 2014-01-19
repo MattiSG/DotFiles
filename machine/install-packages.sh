@@ -56,6 +56,19 @@ brew cask install vlc
 brew cask install xquartz
 brew cask install xscope
 
+# Install quicklook plugins
+# Credit: https://github.com/sindresorhus/quick-look-plugins
+
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlprettypatch
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask install webp-quicklook
+brew cask install suspicious-package
+
 # Prepare brew for multi-users setup
 
 echo "Now let's make brew useful for all users."
