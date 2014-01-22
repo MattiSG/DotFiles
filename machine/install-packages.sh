@@ -59,15 +59,15 @@ brew cask install xscope
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
 
-brew cask install qlcolorcode
-brew cask install qlstephen
-brew cask install qlmarkdown
-brew cask install quicklook-json
-brew cask install qlprettypatch
-brew cask install quicklook-csv
-brew cask install betterzipql
-brew cask install webp-quicklook
-brew cask install suspicious-package
+brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
+brew cask install --qlplugindir='/Library/QuickLook' qlstephen
+brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
+brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
+brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
+brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
+brew cask install --qlplugindir='/Library/QuickLook' betterzipql
+brew cask install --qlplugindir='/Library/QuickLook' webp-quicklook
+brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
 
 # Prepare brew for multi-users setup
 
