@@ -6,8 +6,8 @@ alias la="ls -lGa"
 alias lsd='ls -lG | grep "^d"'
 # Make executable
 alias mkex="chmod u+x"
-# Edit the profile file
-alias profile="edit ~/.profile"
+# Edit this dotfiles repository
+alias dots="edit $(dirname $BASH_SOURCE)/.."
 # Get Git root
 alias groot='echo ./$(git rev-parse --show-cdup) || pwd'
 # Go to Git root
