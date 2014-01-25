@@ -6,8 +6,6 @@ alias la="ls -lGa"
 alias lsd='ls -lG | grep "^d"'
 # Make executable
 alias mkex="chmod u+x"
-# MySQL server
-alias mysql="/usr/local/mysql/bin/mysql || echo MySQL was not found in /usr/local/mysql/bin  :-S"
 # Edit the profile file
 alias profile="edit ~/.profile"
 # Get Git root
