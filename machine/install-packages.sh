@@ -23,12 +23,16 @@ brew tap phinze/homebrew-cask
 brew install brew-cask || brew upgrade brew-cask
 brew tap caskroom/versions
 
-# Install apps
+# Install browsers
 
 brew cask install google-chrome
 brew cask install firefox
 brew cask install firefox-aurora
 brew cask install opera
+
+# Install apps
+
+brew cask install airfoil
 brew cask install caffeine
 brew cask install carbon-copy-cloner
 brew cask install cyberduck
@@ -36,17 +40,24 @@ brew cask install daisydisk
 brew cask install dropbox
 brew cask install fluid
 brew cask install gitx-rowanj
+brew cask install google-refine
 brew cask install growlnotify
 brew cask install handbrake
 brew cask install imageoptim
+brew cask install inkscape
 brew cask install libreoffice
 brew cask install macpardeluxe
+brew cask install netshade
 brew cask install omnigraffle
 brew cask install pacifist
+brew cask install perian
 brew cask install postgres
+brew cask install quicktime-player7
 brew cask install sauce
+brew cask install sevenzx
 brew cask install sitesucker
 brew cask install skype
+brew cask install shiftit
 brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install transmission
