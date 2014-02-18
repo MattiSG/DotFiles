@@ -61,7 +61,7 @@ brew cask install shiftit
 brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install transmission
-brew cask install vagrant
+brew cask install vagrant && vagrant plugin install vagrant-vbguest
 brew cask install virtualbox
 brew cask install vlc
 brew cask install xquartz
