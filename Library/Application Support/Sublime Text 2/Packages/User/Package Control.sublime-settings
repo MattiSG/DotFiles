@@ -2,17 +2,24 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"ApplySyntax",
+		"BracketHighlighter",
 		"Codeivate",
 		"CoffeeScript",
 		"Color Highlighter",
+		"CSScomb",
 		"Dotfiles Syntax Highlighting",
 		"EasySettings",
 		"EditorConfig",
+		"GitGutter",
 		"HTML5",
 		"Inc-Dec-Value",
 		"Package Control",
 		"Puppet",
 		"SCSS",
-		"SideBarEnhancements"
+		"SideBarEnhancements",
+		"Theme - Flatland",
+		"Unicode Character Highlighter",
+		"yardoc"
 	]
 }
