@@ -7,7 +7,7 @@ alias lsd='ls -lG | grep "^d"'
 # Make executable
 alias mkex="chmod u+x"
 # Edit this dotfiles repository
-alias dots="cd $(dirname $BASH_SOURCE)/.. && edit ."
+alias dots="cd $(dirname $BASH_SOURCE)/.. && edit && git pull"
 # Get Git root
 alias groot='echo ./$(git rev-parse --show-cdup) || pwd'
 # Go to Git root
