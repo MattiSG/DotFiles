@@ -18,9 +18,9 @@ _edit() {
 }
 
 # Opens all given files with the set EDITOR, creating them if they don't exist.
-# $* = paths to files to edit
+# $* = paths to files to edit; defaults to the cwd
 edit() {
-	for f in "$@"
+	for f in "${@:-.}"
 	do _edit "$f"
 	done
 }
