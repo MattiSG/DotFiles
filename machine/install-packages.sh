@@ -66,6 +66,7 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install xquartz
 brew cask install xscope
+brew cask install xslimmer
 
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
