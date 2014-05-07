@@ -13,6 +13,7 @@ brew install git
 # Install runtimes
 
 brew install node
+brew install go
 
 # Install helper tools
 

@@ -11,6 +11,10 @@ export PATH=/usr/local/share/npm/bin:$PATH
 # Source: http://www.davidarno.org/2012/02/09/writing-a-node.js-module-in-coffeescript/
 export NODE_PATH=/usr/local/lib/node_modules/
 
+# Go
+export GOPATH=/usr/local/Cellar/share/go/bin
+export PATH=$GOPATH/bin:$PATH
+
 # DevTools
 export PATH=/Developer/Tools:$PATH
 
