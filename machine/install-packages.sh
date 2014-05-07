@@ -122,3 +122,7 @@ npm install -g watai
 rbenv install 2.0.0-p247
 go get github.com/pengwynn/flint
 
+# Save disk space
+
+brew prune
+brew cask cleanup
