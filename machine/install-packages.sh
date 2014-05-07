@@ -25,8 +25,7 @@ brew install selenium-server-standalone
 
 # Install brew-cask
 
-brew tap phinze/homebrew-cask
-brew install brew-cask || brew upgrade brew-cask
+brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
 # Install browsers
