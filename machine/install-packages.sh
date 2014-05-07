@@ -28,6 +28,10 @@ brew install selenium-server-standalone
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 
+# Perhaps are we not running this for the first time?
+
+brew upgrade
+
 # Install browsers
 
 brew cask install google-chrome
