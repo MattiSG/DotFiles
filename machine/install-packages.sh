@@ -5,17 +5,23 @@ brew update
 
 brew doctor || exit 1
 
-# Install all usual packages
+# Install latest binaries
 
 brew install bash
 brew install git
-brew install imagemagick
-brew install chromedriver
-brew install jsdoc-toolkit
-brew install selenium-server-standalone
+
+# Install runtimes
+
 brew install node
+
+# Install helper tools
+
+brew install chromedriver
+brew install imagemagick
+brew install jsdoc-toolkit
 brew install rbenv
 brew install ruby-build
+brew install selenium-server-standalone
 
 # Install brew-cask
 
