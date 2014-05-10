@@ -81,15 +81,15 @@ brew cask install xslimmer
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
 
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlstephen
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
-sudo brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
-sudo brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
 sudo brew cask install --qlplugindir='/Library/QuickLook' betterzipql
-sudo brew cask install --qlplugindir='/Library/QuickLook' webp-quicklook
+sudo brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
+sudo brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
+sudo brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
+sudo brew cask install --qlplugindir='/Library/QuickLook' qlstephen
+sudo brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
+sudo brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
 sudo brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
+sudo brew cask install --qlplugindir='/Library/QuickLook' webp-quicklook
 
 # Prepare brew for multi-users setup
 
