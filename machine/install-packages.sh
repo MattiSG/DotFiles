@@ -82,6 +82,7 @@ brew cask install xslimmer
 # Credit: https://github.com/sindresorhus/quick-look-plugins
 
 sudo brew cask install --qlplugindir='/Library/QuickLook' betterzipql
+sudo brew cask install --qlplugindir='/Library/QuickLook' ipaql
 sudo brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
 sudo brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
 sudo brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
