@@ -42,6 +42,7 @@ brew cask install opera
 
 # Install apps
 
+brew cask install apptrap
 brew cask install airfoil
 brew cask install caffeine
 brew cask install carbon-copy-cloner
