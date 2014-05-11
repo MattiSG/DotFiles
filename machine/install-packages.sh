@@ -93,6 +93,11 @@ sudo brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
 sudo brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
 sudo brew cask install --qlplugindir='/Library/QuickLook' webp-quicklook
 
+# Install other plugins
+
+brew cask install colorpicker-developer
+brew cask install colorpicker-hex
+
 # Prepare brew for multi-users setup
 
 echo "Now let's make brew useful for all users."
