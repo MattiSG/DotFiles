@@ -128,6 +128,7 @@ npm install -g growl
 npm install -g watai
 rbenv install 2.0.0-p247
 go get github.com/pengwynn/flint
+sudo easy_install csvkit
 
 # Save disk space
 
