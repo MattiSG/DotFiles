@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if git status --short | grep -q [^/].travis.yml
+if echo "$1" | egrep --quiet '^\.travis\.yml'
 then
 	if ! command -v travis > /dev/null 2>&1	# http://stackoverflow.com/questions/592620
 	then

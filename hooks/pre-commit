@@ -1,0 +1,21 @@
+#!/bin/sh
+
+BASEDIR="$(cd $(dirname $(readlink $0 || echo $0)) && pwd)"
+
+
+git diff --cached --name-only | while read file
+do
+	if [[ -e "$file" ]]	# Git diff also presents deleted files, we can't analyze them
+	then
+		for script in $(ls $BASEDIR/pre-commits/)
+		do
+			if ! $BASEDIR/pre-commits/$script "$file"
+			then
+				echo
+				echo "[41m ⚠ Commit prevented because of the problems above [0m"
+				exit 1	# exit from the while loop
+			fi
+		done
+	fi
+done || exit 1	# exit from the whole script
+
