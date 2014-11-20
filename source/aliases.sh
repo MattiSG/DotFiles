@@ -32,10 +32,7 @@ alias ql="qlmanage -p 2>/dev/null"
 alias finder='cd "$(osascript -e "tell application \"Finder\" to if window 1 exists then if target of window 1 as string is not \":\" then get POSIX path of (target of window 1 as alias)")"'
 
 # Git shortcuts
-alias commit="git commit"
-alias status="git status -sb"
 alias push="git push --follow-tags"
-alias log="git log"
 
 #######################
 # From Mathias Bynens #
