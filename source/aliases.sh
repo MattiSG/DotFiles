@@ -3,7 +3,7 @@ alias l="ls -lG"
 # List all files (including invisibles) with details and colors
 alias la="ls -lGa"
 # List only directories
-alias lsd='ls -lG | grep "^d"'
+alias ld='ls -lG | grep "^d"'
 # Make executable
 alias mkex="chmod u+x"
 # Edit this dotfiles repository
