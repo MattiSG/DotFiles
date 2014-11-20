@@ -1,3 +1,7 @@
+# Edit this dotfiles repository
+alias dots="cd $(dirname $BASH_SOURCE)/.. && edit && git pull"
+# Reload profile
+alias reload="source ~/.profile"
 # List with details and colors
 alias l="ls -lG"
 # List all files (including invisibles) with details and colors
@@ -6,8 +10,6 @@ alias la="ls -lGa"
 alias ld='ls -lG | grep "^d"'
 # Make executable
 alias mkex="chmod u+x"
-# Edit this dotfiles repository
-alias dots="cd $(dirname $BASH_SOURCE)/.. && edit && git pull"
 # Get Git root
 alias groot='echo ./$(git rev-parse --show-cdup) || pwd'
 # Go to Git root
@@ -16,8 +18,6 @@ alias gd='[ ! -z `git rev-parse --show-cdup` ] && cd `groot`'
 alias grep="grep --color=auto"
 # sha any input
 alias sha="openssl sha1"
-# Reload profile
-alias reload="source ~/.profile"
 # OSX: open current directory with GitX
 alias gitx='open -a GitX `groot`'
 # OSX: hide file in Finder
