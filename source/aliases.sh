@@ -18,6 +18,8 @@ alias gd='[ ! -z `git rev-parse --show-cdup` ] && cd `groot`'
 alias grep="grep --color=auto"
 # sha any input
 alias sha="openssl sha1"
+# Re-execute last command as admin; credit: github.com/kud/my.
+alias fuck='sudo $(fc -ln -1)'
 # OSX: open current directory with GitX
 alias gitx='open -a GitX `groot`'
 # OSX: hide file in Finder
