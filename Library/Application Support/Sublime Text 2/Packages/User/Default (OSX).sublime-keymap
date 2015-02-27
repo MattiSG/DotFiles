@@ -1,4 +1,4 @@
 [
-	{ "keys": ["ctrl+tab"], "command": "next_view" },
-	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+	{ "keys": ["super+<"], "command": "next_view" },
+	{ "keys": ["super+shift+<"], "command": "prev_view" }
 ]
