@@ -59,6 +59,7 @@ brew cask install inkscape
 brew cask install libreoffice
 brew cask install macpardeluxe
 brew cask install netshade
+brew cask install noun-project
 brew cask install omnigraffle
 brew cask install pacifist
 brew cask install perian
