@@ -1,6 +1,3 @@
-# Homebrew
-export PATH=/usr/local/sbin:$PATH
-
 # NPM
 export PATH=$PATH:/usr/local/share/npm/bin
 
