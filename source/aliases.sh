@@ -26,8 +26,6 @@ alias gitx='open -a GitX `groot`'
 alias hide="SetFile -a V"
 # OSX: show file in Finder
 alias show="SetFile -a v"
-# OSX: find with Spotlight
-alias spotlight="mdfind -onlyin ."
 # OSX: Quicklook file
 alias ql="qlmanage -p 2>/dev/null"
 # OSX: cd to frontmost Finder window
