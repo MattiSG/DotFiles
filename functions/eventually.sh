@@ -4,5 +4,6 @@ function eventually() {	# $@ = command to execute
 		echo '--------'
 		date
 		echo '--------'
+		sleep 1
 	done
 }
