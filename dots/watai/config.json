@@ -1,0 +1,9 @@
+{
+	"driverCapabilities": {
+		"opera.binary":	"/opt/homebrew-cask/Caskroom/opera/latest/Opera.app/Contents/MacOS/opera",
+		"firefox_binary": "/opt/homebrew-cask/Caskroom/firefox/latest/Firefox.app/Contents/MacOS/firefox",
+		"chromeOptions": {
+			"binary": "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
+		}
+	}
+}
