@@ -17,8 +17,9 @@
 	tags = tag -l -n99
 	branches = branch -a
 	remotes = remote -v
-	# Credit an author on the latest commit
-	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+	# Credit an author on the given commit range. Defaults to the latest commit.
+	# $1 = author name, $2 = author email, [$3 = revision to start from], [$4 = revision to end at]
+	credit = "!f() { git filter-branch --force --commit-filter \"GIT_AUTHOR_NAME=\\\"$1\\\" GIT_AUTHOR_EMAIL=$2 git commit-tree `echo '$'`@ \" ${3:-HEAD^}..${4:-HEAD}; }; f"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
 	# Amend the latest commit
