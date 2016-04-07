@@ -40,6 +40,7 @@
 [user]
 	name = Matti Schneider
 	email = hi@mattischneider.fr
+	signingkey = BF1BE9D0
 
 [core]
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
