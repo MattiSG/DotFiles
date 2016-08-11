@@ -49,7 +49,7 @@ brew cask install carbon-copy-cloner
 brew cask install cyberduck
 brew cask install daisydisk
 brew cask install dropbox
-brew cask install fluid
+brew cask install electron
 brew cask install gitup
 brew cask install google-refine
 brew cask install growlnotify
