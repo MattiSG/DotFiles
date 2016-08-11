@@ -50,7 +50,7 @@ brew cask install cyberduck
 brew cask install daisydisk
 brew cask install dropbox
 brew cask install fluid
-brew cask install gitx-rowanj
+brew cask install gitup
 brew cask install google-refine
 brew cask install growlnotify
 brew cask install handbrake
