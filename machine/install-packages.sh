@@ -57,7 +57,7 @@ brew cask install handbrake
 brew cask install imageoptim
 brew cask install inkscape
 brew cask install libreoffice
-brew cask install macpardeluxe
+brew cask install macpar-deluxe
 brew cask install netshade
 brew cask install noun-project
 brew cask install omnigraffle
