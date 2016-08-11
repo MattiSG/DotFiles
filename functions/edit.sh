@@ -14,7 +14,7 @@ _edit() {
 	then target=`readlink "$target"`
 	fi
 
-	open -a "Sublime Text 2" "$target"
+	open -a "$EDITOR" "$target"
 }
 
 # Opens all given files with the set EDITOR, creating them if they don't exist.

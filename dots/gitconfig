@@ -45,7 +45,7 @@
 [core]
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,trailing-space
-	editor = /opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\\ Text\\ 2.app/Contents/MacOS/Sublime\\ Text\\ 2
+	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
 	precomposeunicode = true	# avoid issues with non-ASCII filenames in OS X <http://stackoverflow.com/questions/5581857>
 
 [color]
@@ -96,4 +96,4 @@
 [rebase]
 	autosquash = true
 [sequence]
-	editor = /opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\\ Text\\ 2.app/Contents/MacOS/Sublime\\ Text\\ 2
+	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
