@@ -1,0 +1,4 @@
+[
+	{ "keys": ["super+<"], "command": "next_view" },
+	{ "keys": ["super+shift+<"], "command": "prev_view" }
+]

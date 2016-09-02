@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+console.error.bind(console, '?? ${1:}')
+]]></content>
+	<tabTrigger>btip</tabTrigger>
+	<scope>source.js</scope>
+</snippet>

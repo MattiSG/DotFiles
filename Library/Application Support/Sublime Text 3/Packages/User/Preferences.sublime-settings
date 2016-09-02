@@ -1,0 +1,28 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"default_line_ending": "system",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		".vagrant",
+		"bower_components",
+		"CVS",
+		"node_modules"
+	],
+	"font_face": "PanicSans",
+	"font_size": 15.0,
+	"highlight_line": true,
+	"indent_subsequent_lines": false,
+	"scroll_past_end": true,
+	"shift_tab_unindent": true,
+	"show_full_path": true,
+	"spell_check": true,
+	"tab_completion": false,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}
