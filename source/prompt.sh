@@ -57,15 +57,15 @@ gitinfo() {
 
 # Credit: <http://frantic.im/notify-on-completion>
 notify_if_not_frontmost() {
-	LAST_EXIT_CODE=$?
+	local exit_code=$1
 	CMD=$(history | tail -1 | cut -d ' ' -f 6-)
-	osascript "$(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt" "$CMD" "$LAST_EXIT_CODE" &
+	osascript "$(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt" "$CMD" "$exit_code" &
 }
 
 prompt_command() {
 	local exit_code=$?
 
-	PS1="$(notify_if_not_frontmost)$(user)$(host)$(directory)$(gitinfo) $(timestamp)$(exit_code $exit_code)\n› "
+	PS1="$(notify_if_not_frontmost $exit_code)$(user)$(host)$(directory)$(gitinfo) $(timestamp)$(exit_code $exit_code)\n› "
 }
 
 PROMPT_COMMAND="prompt_command"
