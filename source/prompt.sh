@@ -59,7 +59,7 @@ gitinfo() {
 notify_if_not_frontmost() {
 	LAST_EXIT_CODE=$?
 	CMD=$(history | tail -1 | cut -d ' ' -f 6-)
-	osascript $(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt "$CMD" "$LAST_EXIT_CODE" &
+	osascript "$(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt" "$CMD" "$LAST_EXIT_CODE" &
 }
 
 prompt_command() {
