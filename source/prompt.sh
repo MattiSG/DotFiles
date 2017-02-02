@@ -58,8 +58,8 @@ gitinfo() {
 # Credit: <http://frantic.im/notify-on-completion>
 notify_if_not_frontmost() {
 	local exit_code=$1
-	CMD=$(history | tail -1 | cut -d ' ' -f 6-)
-	osascript "$(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt" "$CMD" "$exit_code" &
+	local previous_command=$(history | tail -1 | cut -d ' ' -f 6-)
+	osascript "$(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt" "$previous_command" "$exit_code" &
 }
 
 prompt_command() {
