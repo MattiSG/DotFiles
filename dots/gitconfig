@@ -89,10 +89,13 @@
 [remote "prs"]	# allow checking out pull requests directly <https://gist.github.com/piscisaureus/3342247>, but do not use `origin` to prevent brew issue <https://github.com/Homebrew/homebrew/issues/19436>
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
 [push]
-	default = current
+	default = current  # only push the current branch to its homonym on the remote
+	recurseSubmodules = on-demand  # always push commits that were made in submodules
 [pull]
 	ff = true  # only merge from remote if it is a fast-forward
+[fetch]
 	prune = true  # remove local branches tracking branches that were deleted on the remote
+	recurseSubmodules = true
 [rebase]
 	autosquash = true
 [sequence]
