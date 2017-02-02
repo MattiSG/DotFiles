@@ -88,6 +88,7 @@
 	prune = true  # remove local branches tracking branches that were deleted on the remote
 	recurseSubmodules = true
 [rebase]
-	autosquash = true
+	autoSquash = true
+	missingCommitsCheck = warn
 [sequence]
 	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
