@@ -41,6 +41,9 @@
 
 # All the following options are documented on https://git-scm.com/docs/git-config
 
+[commit]
+	gpgSign = true
+
 [core]
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,trailing-space
@@ -63,7 +66,6 @@
 
 [push]
 	default = current  # only push the current branch to its homonym on the remote
-	gpgSign = true
 	recurseSubmodules = on-demand  # always push commits that were made in submodules
 
 [rebase]
