@@ -9,9 +9,10 @@ on run argv
 				set exitCode to item 2 of argv
 
 				if exitCode is not "0" then
-					set notifBody to "Failed with exit code " & exitCode
+					set notifTitle to "❌ " & notifTitle
+					set notifBody to "Exit code: " & exitCode
 				else
-					set notifTitle to notifTitle & " succeeded"
+					set notifTitle to "✅ " & notifTitle
 				end if
 				display notification notifBody with title notifTitle
 			end if
