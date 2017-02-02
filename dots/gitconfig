@@ -90,9 +90,9 @@
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
 [push]
 	default = current
-# Only merge from remote if it is a fast-forward
 [pull]
-	ff = true
+	ff = true  # only merge from remote if it is a fast-forward
+	prune = true  # remove local branches tracking branches that were deleted on the remote
 [rebase]
 	autosquash = true
 [sequence]
