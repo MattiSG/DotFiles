@@ -1,40 +1,45 @@
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
+
 	# View the current working tree status using the short format
 	s = status --short --branch
+
 	# Clone a repository including all submodules
 	c = clone --recursive
+
 	# Switch to a branch, creating it if necessary
 	go = checkout -b
-	# Show verbose output about tags
+
+	# Show verbose output
 	tags = tag -l -n99
 	branches = branch -a
 	remotes = remote -v
+
 	# Credit an author on the given commit range. Defaults to the latest commit.
 	# $1 = author name, $2 = author email, [$3 = revision to start from], [$4 = revision to end at]
 	credit = "!f() { git filter-branch --force --commit-filter \"GIT_AUTHOR_NAME=\\\"$1\\\" GIT_AUTHOR_EMAIL=$2 git commit-tree `echo '$'`@ \" ${3:-HEAD^}..${4:-HEAD}; }; f"
+
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+
 	# Amend the latest commit
 	amend = commit --amend
+
 	# Blame ignoring whitespace and moved lines
 	who = blame -MwCCC
+
 	# Save current status to a stash without going back to previous commit
 	# Credit: http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
 	save = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+
 	# Delete a branch both locally and remotely, possibly taking a named remote as first parameter
 	drop = "!f() { git branch -D ${2:-$1}; git push --delete `[[ $# -gt 1 ]] && echo $1 || echo origin` ${2:-$1}; }; f"
+
 	# Synchronize a local branch with the distant one
 	sync = ! git stash && git pull --rebase && git push && git stash pop
 
-[help]
-	autocorrect = 1
-
-[user]
-	name = Matti Schneider
-	email = hi@mattischneider.fr
-	signingkey = BF1BE9D0
+# All the following options are documented on https://git-scm.com/docs/git-config
 
 [core]
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
@@ -42,25 +47,36 @@
 	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
 	precomposeunicode = true	# avoid issues with non-ASCII filenames in OS X <http://stackoverflow.com/questions/5581857>
 
-[color]
-	# Use colors in Git commands that are capable of colored output when outputting to the terminal
-	ui = auto
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+[fetch]
+	prune = true  # remove local branches tracking branches that were deleted on the remote
+	recurseSubmodules = true
+
+[help]
+	autocorrect = 1
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+[pull]
+	ff = true  # only merge from remote if it is a fast-forward
+
+[push]
+	default = current  # only push the current branch to its homonym on the remote
+	recurseSubmodules = on-demand  # always push commits that were made in submodules
+
+[rebase]
+	autoSquash = true
+	missingCommitsCheck = warn
+
+[sequence]
+	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
+
+[user]
+	name = Matti Schneider
+	email = hi@mattischneider.fr
+	signingkey = BF1BE9D0
+
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
@@ -79,16 +95,20 @@
 
 [remote "prs"]	# allow checking out pull requests directly <https://gist.github.com/piscisaureus/3342247>, but do not use `origin` to prevent brew issue <https://github.com/Homebrew/homebrew/issues/19436>
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
-[push]
-	default = current  # only push the current branch to its homonym on the remote
-	recurseSubmodules = on-demand  # always push commits that were made in submodules
-[pull]
-	ff = true  # only merge from remote if it is a fast-forward
-[fetch]
-	prune = true  # remove local branches tracking branches that were deleted on the remote
-	recurseSubmodules = true
-[rebase]
-	autoSquash = true
-	missingCommitsCheck = warn
-[sequence]
-	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
+
+
+[color]
+	ui = auto  # use colors in Git commands that are capable of colored output when outputting to the terminal
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
