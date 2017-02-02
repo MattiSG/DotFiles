@@ -2,3 +2,6 @@
 
 # Opt-in versioning
 Library/Application\ Support/Sublime\ Text\ 2/Packages
+
+# Compiled output
+lib/notify-if-not-terminal.scpt

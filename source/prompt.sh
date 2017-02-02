@@ -59,7 +59,7 @@ gitinfo() {
 notify_if_not_frontmost() {
 	local exit_code=$1
 	local previous_command=$(history | tail -1 | cut -d ' ' -f 5-)
-	osascript "$(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt" "$previous_command" "$exit_code" &
+	osascript "$(dirname "$BASH_SOURCE")/../lib/notify-if-not-terminal.scpt" "$previous_command" "$exit_code" || "$(dirname "$BASH_SOURCE")/../session/enable-terminal-notifications.sh" &
 }
 
 prompt_command() {
