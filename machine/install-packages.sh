@@ -42,10 +42,12 @@ brew cask install opera
 
 # Install apps
 
+brew cask install appshelf
 brew cask install apptrap
 brew cask install airfoil
 brew cask install caffeine
 brew cask install carbon-copy-cloner
+brew cask install cuteclips
 brew cask install cyberduck
 brew cask install daisydisk
 brew cask install dropbox
