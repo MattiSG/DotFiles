@@ -11,9 +11,6 @@ for f in $(ls -1 "$BASEDIR/functions")
 do source "$BASEDIR/functions/$f"
 done
 
-# Open path to Finder frontmost window
-finder
-
 export EDITOR='/Applications/Sublime Text.app/Contents/MacOS/Sublime Text'
 
 # Append to the Bash history file, rather than overwriting it
