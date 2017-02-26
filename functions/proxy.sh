@@ -1,4 +1,5 @@
 TUNNEL_PORT=2983
+SERVER=''
 
 function tunnel_pid() {
 	ps aux | grep $TUNNEL_PORT | grep ssh | tr -s ' ' | cut -d ' ' -f 2
@@ -8,11 +9,17 @@ function tunnel_pid() {
 # https://mikeash.com/ssh_socks.html
 # https://gist.github.com/jordelver/3073101
 function proxy() {
+	if [[ -z $SERVER ]]
+	then
+		echo 'No proxy server set!'
+		return 1
+	fi
+
 	local interface="Wi-Fi"
 
 	if [[ $1 = 'on' ]]
 	then
-		ssh -Nf -D $TUNNEL_PORT root@79.137.81.113
+		ssh -Nf -D $TUNNEL_PORT $SERVER
 		echo "Tunnel PID: $(tunnel_pid)"
 		sudo networksetup -setsocksfirewallproxy $interface localhost $TUNNEL_PORT
 	elif [[ $1 = 'off' ]]
