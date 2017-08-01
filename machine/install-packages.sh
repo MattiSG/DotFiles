@@ -18,6 +18,7 @@ brew install go
 # Install helper tools
 
 brew install chromedriver
+brew install ffmpeg --with-x265 --with-webp
 brew install imagemagick
 brew install jsdoc-toolkit
 brew install rbenv
