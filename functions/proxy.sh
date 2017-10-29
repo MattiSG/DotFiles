@@ -1,5 +1,5 @@
-TUNNEL_PORT=2983
-SERVER=''
+TUNNEL_PORT=2465
+SERVER='root@139.99.105.193'
 
 function tunnel_pid() {
 	ps aux | grep $TUNNEL_PORT | grep ssh | tr -s ' ' | cut -d ' ' -f 2
