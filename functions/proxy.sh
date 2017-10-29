@@ -34,6 +34,7 @@ function proxy() {
 		sudo networksetup -setsocksfirewallproxystate "$TUNNEL_INTERFACE" off
 	fi
 
+	echo "Interface: $TUNNEL_INTERFACE"
 	networksetup -getsocksfirewallproxy "$TUNNEL_INTERFACE"
 	echo "External IP: $(ip)"
 }
