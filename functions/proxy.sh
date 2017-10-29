@@ -21,7 +21,7 @@ function proxy() {
 	then
 		ssh -Nf -D $TUNNEL_PORT $SERVER
 		echo "Tunnel PID: $(tunnel_pid)"
-		sudo networksetup -setsocksfirewallproxy $interface localhost $TUNNEL_PORT
+		sudo networksetup -setsocksfirewallproxy "$interface" localhost $TUNNEL_PORT
 	elif [[ $1 = 'off' ]]
 	then
 		if [[ $(tunnel_pid) ]]
@@ -29,9 +29,9 @@ function proxy() {
 			kill $(tunnel_pid)
 			echo "Tunnel stopped"
 		fi
-		sudo networksetup -setsocksfirewallproxystate $interface off
+		sudo networksetup -setsocksfirewallproxystate "$interface" off
 	fi
 
-	networksetup -getsocksfirewallproxy $interface
+	networksetup -getsocksfirewallproxy "$interface"
 	echo "External IP: $(ip)"
 }
