@@ -3,3 +3,7 @@
 ControlMaster auto
 ControlPath /tmp/ssh_mux_%r@%h:%p
 ControlPersist yes
+
+# Prefer ED25519 over RSA
+# See more: https://news.ycombinator.com/item?id=12574510
+IdentityFile ~/.ssh/id_ed25519
