@@ -4,7 +4,7 @@ TARGET_DIR_PREFIX="${2:-Reencoded}"
 encoder=libx265  # libx265 = HEVC, little support but much smaller filesize; libx264 = H.264, very wide support
 quality=20  # ok quality = 28 for HEVC, 23 for H264; great quality = 22 for HEVC, 20 for H264
 scale="1280:720"  # decrease size of full HD streams; leave empty for no downscaling
-audio_bitrate="80k"  # decrease audio quality to something acceptable for voice; set to 180k for precise music
+audio_bitrate="80k"  # decrease audio quality to something acceptable for voice; set to 180k for precise music; leave empty to remove audio
 
 target_dir="$TARGET_DIR_PREFIX-$encoder-$quality"
 
@@ -18,7 +18,10 @@ shared_options="$shared_options -filter:video format=yuv420p"  # ensure QuickTim
 if [[ $scale ]]
 then shared_options="$shared_options -filter:video scale=$scale"
 fi
-shared_options="$shared_options -codec:audio aac -b:a $audio_bitrate"
+if [[ $audio_bitrate ]]
+then shared_options="$shared_options -codec:audio aac -b:a $audio_bitrate"
+else shared_options="$shared_options -an"
+fi
 shared_options="$shared_options -movflags +faststart"  # ensure internet streaming is smooth
 
 reencode() {
