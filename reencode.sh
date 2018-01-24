@@ -38,7 +38,7 @@ reencode() {
 if [[ $1 ]]
 then reencode "$1"
 else
-	for file in *.mp4 *.mov
+	for file in *.[mM][pPoO][4gGvV]
 	do reencode "$file"
 	done
 fi
