@@ -2,12 +2,12 @@
 alias dots="cd $(dirname $BASH_SOURCE)/.. && edit && git pull"
 # Reload profile
 alias reload="source ~/.profile"
-# List with details and colors
-alias l="ls -lG"
-# List all files (including invisibles) with details and colors
-alias la="ls -lGa"
+# List with details, human-readable file sizes and colors
+alias l="ls -lhG"
+# List all files (including invisibles) with details, human-readable file sizes and colors
+alias la="ls -lhGa"
 # List only directories
-alias ld='ls -lG | grep "^d"'
+alias ld='ls -lhG | grep "^d"'
 # Make executable
 alias mkex="chmod u+x"
 # Get Git root
