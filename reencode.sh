@@ -15,6 +15,10 @@ shared_options="$shared_options -crf $quality"
 shared_options="$shared_options -preset veryslow"  # more compute power against smaller size
 shared_options="$shared_options -codec:v $encoder"
 shared_options="$shared_options -filter:video format=yuv420p"  # ensure QuickTime can read resulting file
+
+if [[ $encoder == 'libx265' ]]
+then shared_options="$shared_options -tag:v hvc1"  # ensure QuickTime can read HEVC file, see https://stackoverflow.com/a/46540577/594053
+fi
 if [[ $scale ]]
 then shared_options="$shared_options -filter:video scale=$scale"
 fi
