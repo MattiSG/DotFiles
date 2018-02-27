@@ -12,6 +12,9 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Set highlight color to a specific yellow
 defaults write NSGlobalDomain AppleHighlightColor -string '0.984300 0.929400 0.450900'
 
+# Show seconds in menu bar clock (allows to detect freezes)
+defaults write com.apple.menuextra.clock DateFormat -string 'H:mm:ss'
+
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
