@@ -1,0 +1,30 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"ApplySyntax",
+		"Babel",
+		"CoffeeScript",
+		"Color Highlighter",
+		"CSScomb",
+		"DocBlockr",
+		"Dotfiles Syntax Highlighting",
+		"EasySettings",
+		"EditorConfig",
+		"GitGutter",
+		"Handlebars",
+		"HTML5",
+		"Inc-Dec-Value",
+		"JavaScriptNext - ES6 Syntax",
+		"JSX",
+		"Markdown Preview",
+		"Package Control",
+		"Puppet",
+		"SCSS",
+		"SideBarEnhancements",
+		"Theme - Flatland",
+		"Unicode Character Highlighter",
+		"WakaTime",
+		"yardoc"
+	]
+}
