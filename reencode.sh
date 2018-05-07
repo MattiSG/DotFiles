@@ -42,7 +42,7 @@ reencode() {
 if [[ $1 ]]
 then reencode "$1"
 else
-	for file in *.[mM][pPoO][4gGvV]
+	for file in *.[mM][pPoO4][4gGvV]
 	do reencode "$file"
 	done
 fi
