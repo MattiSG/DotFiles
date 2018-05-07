@@ -12,6 +12,9 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Set highlight color to a specific yellow
 defaults write NSGlobalDomain AppleHighlightColor -string '0.984300 0.929400 0.450900'
 
+# Show seconds in menu bar clock (allows to detect freezes)
+defaults write com.apple.menuextra.clock DateFormat -string 'H:mm:ss'
+
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
@@ -365,19 +368,17 @@ defaults write com.apple.mail DisableSendAnimations -bool true
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
-# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
-#defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
+# Show blind Cc recipients field
+defaults write com.apple.mail ShowBccHeader -bool true
 
-# Display emails in threaded mode, sorted by date (oldest at the top)
-#defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
-#defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
-#defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
+# Show contact photos in message list
+defaults write com.apple.mail EnableContactPhotos -bool true
 
-# Disable inline attachments (just show the icons)
-#defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+# Show To / Cc labels in message list
+defaults write com.apple.mail EnableToCcInMessageList -bool true
 
-# Disable automatic spell checking
-#defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
+# Show no excerpt in message list
+defaults write com.apple.mail EnableToCcInMessageList NumberOfSnippetLines 0
 
 ###############################################################################
 # iTunes                                                                      #
