@@ -1,3 +1,5 @@
+# https://bugzilla.mozilla.org/show_bug.cgi?id=693450
+
 function join_by { local IFS="$1"; shift; echo "$*"; }
 
 
