@@ -43,10 +43,10 @@ reencode_command() {
 	filename=`echo "$1" | rev | cut -d '.' -f 2- | rev`  # remove extension
 
 	if [[ -e "$filename.jpg" ]]
-	then local file_specific_options="-attach $filename.jpg"  # add cover artwork
+	then local file_specific_options="-attach '$filename.jpg'"  # add cover artwork
 	fi
 
-	echo ffmpeg -i "$1" $shared_options $file_specific_options "$target_dir/$filename.$encoder.mp4"
+	echo ffmpeg -i "'$1'" $shared_options $file_specific_options "'$target_dir/$filename.$encoder.mp4'"
 }
 
 
@@ -61,7 +61,7 @@ do
 	if [[ $dry_run ]]
 	then echo $command
 	else
-		$command
+		bash -c "$command"
 		touch -r "$1" "$target_dir/$filename.$encoder.mp4"  # copy mtime and ctime
 	fi
 done
