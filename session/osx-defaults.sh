@@ -489,7 +489,8 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -stri
 defaults write com.apple.mail EnableToCcInMessageList -bool true
 
 # Show no excerpt in message list
-defaults write com.apple.mail EnableToCcInMessageList NumberOfSnippetLines 0
+defaults write com.apple.mail NumberOfSnippetLines -int 0
+
 # Disable inline attachments (just show the icons)
 #defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
