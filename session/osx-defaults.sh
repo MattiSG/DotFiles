@@ -469,8 +469,13 @@ defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
 ###############################################################################
+# Gitup.app                                                            #
 ###############################################################################
 
+# Do not show Gitup help
+defaults write co.gitup.mac HelpShown_COMMIT -int 2
+defaults write co.gitup.mac HelpShown_MAP -int 4
+defaults write co.gitup.mac HelpShown_STASHES -int 1
 
 ###############################################################################
 # Kill affected applications                                                  #
