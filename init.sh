@@ -10,6 +10,12 @@ if [[ $machineAlreadySetUp != 'n' ]]
 then
 	echo 'Nothing to do for the machine'
 else
+	echo "Before anything, you need to give Terminal and bash full disk access through System Preferences"
+	echo "See how to do this on <https://github.com/mathiasbynens/dotfiles/issues/849#issuecomment-436099833>"
+	echo "If requested to restart Terminal, accept it and relaunch this script"
+	echo "Quit System Preferences once you've set this up to continue"
+	open -W /System/Library/PreferencePanes/Security.prefPane
+
 	echo "Opening AppStore for manual install"
 	open -a "App Store"
 
