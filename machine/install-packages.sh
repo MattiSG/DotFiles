@@ -26,7 +26,10 @@ brew install rbenv
 brew install ruby-build
 brew install selenium-server-standalone
 
+# Install ad- and track-block
 
+brew install mattisg/mattisg/adblock
+sudo adblock on
 
 # Perhaps are we not running this for the first time?
 
