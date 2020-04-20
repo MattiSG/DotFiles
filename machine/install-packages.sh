@@ -24,6 +24,7 @@ brew install imagemagick
 brew install rbenv
 brew install ruby-build
 brew install selenium-server-standalone
+brew install youtube-dl
 
 # Install ad- and track-block
 
@@ -43,52 +44,49 @@ brew cask install opera
 
 # Install apps
 
+brew cask install a-better-finder-rename
 brew cask install appshelf
-brew cask install apptrap
-brew cask install airfoil
 brew cask install caffeine
-brew cask install carbon-copy-cloner
+brew cask install cleanmymac3
 brew cask install cuteclips
 brew cask install cyberduck
 brew cask install daisydisk
-brew cask install dropbox
-brew cask install electron
+brew cask install fluid
 brew cask install gitup
 brew cask install google-refine
-brew cask install growlnotify
+brew cask install gpg-suite
 brew cask install handbrake
 brew cask install imageoptim
 brew cask install inkscape
+brew cask install keybase
 brew cask install libreoffice
+brew cask install little-snitch
 brew cask install macpar-deluxe
+brew cask install micro-snitch
 brew cask install netshade
 brew cask install noun-project
 brew cask install omnigraffle
 brew cask install pacifist
-brew cask install perian
+brew cask install paparazzi
 brew cask install postgres
 brew cask install quicktime-player7
-brew cask install sauce
 brew cask install sevenzx
 brew cask install sitesucker
 brew cask install skype
-brew cask install shiftit
+brew cask install spotify
 brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install transmission
-brew cask install vagrant && vagrant plugin install vagrant-vbguest
 brew cask install virtualbox
+brew cask install vagrant && vagrant plugin install vagrant-vbguest
 brew cask install vlc
 brew cask install xquartz
 brew cask install xscope
-brew cask install xslimmer
 
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
 
-brew cask install --qlplugindir='/Library/QuickLook' betterzipql
 brew cask install --qlplugindir='/Library/QuickLook' qlimagesize
-brew cask install --qlplugindir='/Library/QuickLook' ipaql
 brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
 brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
 brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
@@ -96,7 +94,7 @@ brew cask install --qlplugindir='/Library/QuickLook' qlstephen
 brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
 brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
 brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
-brew cask install --qlplugindir='/Library/QuickLook' webp-quicklook
+brew cask install --qlplugindir='/Library/QuickLook' webpquicklook
 
 # Install other plugins
 
@@ -129,7 +127,6 @@ echo "done"
 
 # Install tools in other languages
 
-npm install -g growl
 npm install -g watai
 npm install -g jsdoc
 rbenv install 2.5.3
