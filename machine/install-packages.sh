@@ -39,7 +39,6 @@ brew upgrade
 
 brew cask install google-chrome
 brew cask install firefox
-brew cask install firefox-aurora
 brew cask install opera
 
 # Install apps
