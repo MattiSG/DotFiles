@@ -129,7 +129,7 @@ echo "done"
 
 npm install -g growl
 npm install -g watai
-rbenv install 2.0.0-p247
+rbenv install 2.5.3
 sudo easy_install csvkit
 
 # Save disk space
