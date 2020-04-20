@@ -25,10 +25,7 @@ brew install rbenv
 brew install ruby-build
 brew install selenium-server-standalone
 
-# Install brew-cask
 
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 
 # Perhaps are we not running this for the first time?
 
@@ -86,17 +83,17 @@ brew cask install xslimmer
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
 
-sudo brew cask install --qlplugindir='/Library/QuickLook' betterzipql
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlimagesize
-sudo brew cask install --qlplugindir='/Library/QuickLook' ipaql
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
-sudo brew cask install --qlplugindir='/Library/QuickLook' qlstephen
-sudo brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
-sudo brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
-sudo brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
-sudo brew cask install --qlplugindir='/Library/QuickLook' webp-quicklook
+brew cask install --qlplugindir='/Library/QuickLook' betterzipql
+brew cask install --qlplugindir='/Library/QuickLook' qlimagesize
+brew cask install --qlplugindir='/Library/QuickLook' ipaql
+brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
+brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
+brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
+brew cask install --qlplugindir='/Library/QuickLook' qlstephen
+brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
+brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
+brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
+brew cask install --qlplugindir='/Library/QuickLook' webp-quicklook
 
 # Install other plugins
 
@@ -137,5 +134,4 @@ sudo easy_install csvkit
 
 # Save disk space
 
-brew prune
-brew cask cleanup
+brew cleanup
