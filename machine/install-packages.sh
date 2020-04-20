@@ -19,6 +19,7 @@ brew install go
 
 brew install chromedriver
 brew install ffmpeg --with-x265 --with-webp --with-libvpx
+brew install flint-checker
 brew install imagemagick
 brew install jsdoc-toolkit
 brew install rbenv
@@ -129,7 +130,6 @@ echo "done"
 npm install -g growl
 npm install -g watai
 rbenv install 2.0.0-p247
-go get github.com/pengwynn/flint
 sudo easy_install csvkit
 
 # Save disk space
