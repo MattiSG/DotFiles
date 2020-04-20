@@ -21,7 +21,6 @@ brew install chromedriver
 brew install ffmpeg --with-x265 --with-webp --with-libvpx
 brew install flint-checker
 brew install imagemagick
-brew install jsdoc-toolkit
 brew install rbenv
 brew install ruby-build
 brew install selenium-server-standalone
@@ -132,6 +131,7 @@ echo "done"
 
 npm install -g growl
 npm install -g watai
+npm install -g jsdoc
 rbenv install 2.5.3
 sudo easy_install csvkit
 
