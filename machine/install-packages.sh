@@ -59,6 +59,7 @@ brew cask install imageoptim
 brew cask install inkscape
 brew cask install keybase
 brew cask install libreoffice
+brew cask install licecap
 brew cask install little-snitch
 brew cask install macpar-deluxe
 brew cask install micro-snitch
