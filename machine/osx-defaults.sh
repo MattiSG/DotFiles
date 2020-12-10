@@ -45,11 +45,5 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
-###############################################################################
-# Time Machine                                                                #
-###############################################################################
-
-# Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
