@@ -1,0 +1,8 @@
+if type brew &>/dev/null; then
+  FPATH=/share/zsh/site-functions:/usr/local/share/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/5.8/functions
+
+  autoload -Uz compinit
+  compinit
+fi
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"

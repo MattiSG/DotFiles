@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install homebrew
 which brew > /dev/null || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" || echo "**brew not installed**"
 
