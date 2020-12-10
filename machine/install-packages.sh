@@ -46,15 +46,12 @@ brew cask install opera
 # Install apps
 
 brew cask install a-better-finder-rename
-brew cask install appshelf
 brew cask install caffeine
-brew cask install cleanmymac3
 brew cask install cuteclips
 brew cask install cyberduck
 brew cask install daisydisk
 brew cask install fluid
 brew cask install gitup
-brew cask install google-refine
 brew cask install gpg-suite
 brew cask install handbrake
 brew cask install imageoptim
@@ -71,7 +68,6 @@ brew cask install omnigraffle
 brew cask install pacifist
 brew cask install paparazzi
 brew cask install postgres
-brew cask install quicktime-player7
 brew cask install sevenzx
 brew cask install sitesucker
 brew cask install skype
@@ -82,26 +78,18 @@ brew cask install transmission
 brew cask install virtualbox
 brew cask install vagrant && vagrant plugin install vagrant-vbguest
 brew cask install vlc
-brew cask install xquartz
 brew cask install xscope
 
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
 
-brew cask install --qlplugindir='/Library/QuickLook' qlimagesize
 brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
 brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
 brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
-brew cask install --qlplugindir='/Library/QuickLook' qlstephen
 brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
 brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
 brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
 brew cask install --qlplugindir='/Library/QuickLook' webpquicklook
-
-# Install other plugins
-
-brew cask install colorpicker-developer
-brew cask install colorpicker-hex
 
 # Prepare brew for multi-users setup
 
@@ -116,13 +104,6 @@ echo "done"
 echo -n "Allow group members to write inside this directory…"
 sudo chmod -R g+w /usr/local
 echo "done"
-
-# Install tools in other languages
-
-npm install -g watai
-npm install -g jsdoc
-rbenv install 2.5.3
-sudo easy_install csvkit
 
 # Save disk space
 
