@@ -79,6 +79,7 @@ brew install --cask virtualbox
 brew install --cask vagrant && vagrant plugin install vagrant-vbguest
 brew install --cask vlc
 brew install --cask xscope
+brew install --cask zoomus
 
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
