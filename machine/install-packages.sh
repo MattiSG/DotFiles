@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install homebrew
-which brew > /dev/null || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" || echo "**brew not installed**"
+which brew > /dev/null || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || echo "**brew not installed**"
 
 brew update
 
@@ -20,7 +20,7 @@ brew install go
 # Install helper tools
 
 brew install chromedriver
-brew install ffmpeg --with-x265 --with-webp --with-libvpx
+brew install ffmpeg --with-webp --with-libvpx
 brew install flint-checker
 brew install imagemagick
 brew install rbenv
@@ -39,57 +39,57 @@ brew upgrade
 
 # Install browsers
 
-brew cask install google-chrome
-brew cask install firefox
-brew cask install opera
+brew install --cask google-chrome
+brew install --cask firefox
+brew install --cask opera
 
 # Install apps
 
-brew cask install a-better-finder-rename
-brew cask install caffeine
-brew cask install cuteclips
-brew cask install cyberduck
-brew cask install daisydisk
-brew cask install fluid
-brew cask install gitup
-brew cask install gpg-suite
-brew cask install handbrake
-brew cask install imageoptim
-brew cask install inkscape
-brew cask install keybase
-brew cask install libreoffice
-brew cask install licecap
-brew cask install little-snitch
-brew cask install macpar-deluxe
-brew cask install micro-snitch
-brew cask install netshade
-brew cask install noun-project
-brew cask install omnigraffle
-brew cask install pacifist
-brew cask install paparazzi
-brew cask install postgres
-brew cask install sevenzx
-brew cask install sitesucker
-brew cask install skype
-brew cask install spotify
-brew cask install sublime-text
-brew cask install the-unarchiver
-brew cask install transmission
-brew cask install virtualbox
-brew cask install vagrant && vagrant plugin install vagrant-vbguest
-brew cask install vlc
-brew cask install xscope
+brew install --cask a-better-finder-rename
+brew install --cask caffeine
+brew install --cask cuteclips
+brew install --cask cyberduck
+brew install --cask daisydisk
+brew install --cask fluid
+brew install --cask gitup
+brew install --cask gpg-suite
+brew install --cask handbrake
+brew install --cask imageoptim
+brew install --cask inkscape
+brew install --cask keybase
+brew install --cask libreoffice
+brew install --cask licecap
+brew install --cask little-snitch
+brew install --cask macpar-deluxe
+brew install --cask micro-snitch
+brew install --cask netshade
+brew install --cask noun-project
+brew install --cask omnigraffle
+brew install --cask pacifist
+brew install --cask paparazzi
+brew install --cask postgres
+brew install --cask sevenzx
+brew install --cask sitesucker
+brew install --cask skype
+brew install --cask spotify
+brew install --cask sublime-text
+brew install --cask the-unarchiver
+brew install --cask transmission
+brew install --cask virtualbox
+brew install --cask vagrant && vagrant plugin install vagrant-vbguest
+brew install --cask vlc
+brew install --cask xscope
 
 # Install quicklook plugins
 # Credit: https://github.com/sindresorhus/quick-look-plugins
 
-brew cask install --qlplugindir='/Library/QuickLook' qlcolorcode
-brew cask install --qlplugindir='/Library/QuickLook' qlmarkdown
-brew cask install --qlplugindir='/Library/QuickLook' qlprettypatch
-brew cask install --qlplugindir='/Library/QuickLook' quicklook-csv
-brew cask install --qlplugindir='/Library/QuickLook' quicklook-json
-brew cask install --qlplugindir='/Library/QuickLook' suspicious-package
-brew cask install --qlplugindir='/Library/QuickLook' webpquicklook
+brew install --cask --qlplugindir='/Library/QuickLook' qlcolorcode
+brew install --cask --qlplugindir='/Library/QuickLook' qlmarkdown
+brew install --cask --qlplugindir='/Library/QuickLook' qlprettypatch
+brew install --cask --qlplugindir='/Library/QuickLook' quicklook-csv
+brew install --cask --qlplugindir='/Library/QuickLook' quicklook-json
+brew install --cask --qlplugindir='/Library/QuickLook' suspicious-package
+brew install --cask --qlplugindir='/Library/QuickLook' webpquicklook
 
 # Prepare brew for multi-users setup
 
@@ -98,11 +98,11 @@ echo "Create a 'brew' group through System Preferences: <http://blog.strug.de/20
 read -p "Press any key when the 'brew' group has been created"
 
 echo -n "Change the group of homebrew installation directory…"
-sudo chgrp -R brew /usr/local
+sudo chgrp -R brew /opt/homebrew
 echo "done"
 
 echo -n "Allow group members to write inside this directory…"
-sudo chmod -R g+w /usr/local
+sudo chmod -R g+w /opt/homebrew
 echo "done"
 
 # Save disk space
