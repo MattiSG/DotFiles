@@ -1,3 +1,6 @@
+# Brew
+export PATH=$PATH:/opt/homebrew/bin/
+
 # NPM
 export PATH=$PATH:/usr/local/share/npm/bin
 
