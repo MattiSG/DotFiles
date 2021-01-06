@@ -1,8 +1,8 @@
 # Brew
-export PATH=$PATH:/opt/homebrew/bin/
+export PATH=/opt/homebrew/bin/:$PATH
 
 # NPM
-export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=/usr/local/share/npm/bin:$PATH
 
 # Ensure globally-installed modules can be required without npm link
 # Source: http://www.davidarno.org/2012/02/09/writing-a-node.js-module-in-coffeescript/
