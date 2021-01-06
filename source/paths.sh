@@ -20,3 +20,6 @@ export CLASSPATH=.:${CLASSPATH}
 
 # Ruby with Brew
 export PATH=$PATH:/usr/local/opt/ruby/bin
+# Fix libffi issue with macOS (needed for Jekyll)
+# Source: https://medium.com/@mythreyi/the-agony-of-setting-up-jekyll-on-macos-catalina-aedd0a536ae
+export PKG_CONFIG_PATH=/opt/homebrew/opt/libffi/lib/pkgconfig

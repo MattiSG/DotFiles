@@ -33,6 +33,10 @@ brew install youtube-dl
 brew install mattisg/mattisg/adblock
 sudo adblock on
 
+# Fix libffi issue with macOS (needed for Jekyll)
+# Source: https://medium.com/@mythreyi/the-agony-of-setting-up-jekyll-on-macos-catalina-aedd0a536ae
+brew install libffi
+
 # Perhaps are we not running this for the first time?
 
 brew upgrade
