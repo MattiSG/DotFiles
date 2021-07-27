@@ -11,7 +11,7 @@ for f in $(ls -1 "$BASEDIR/functions")
 do source "$BASEDIR/functions/$f"
 done
 
-export EDITOR='/Applications/Sublime Text.app/Contents/MacOS/Sublime Text'
+export EDITOR='/Applications/Sublime Text.app/Contents/MacOS/sublime_text'
 
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
