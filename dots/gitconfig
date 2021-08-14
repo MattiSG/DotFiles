@@ -47,7 +47,7 @@
 [core]
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,trailing-space
-	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
+	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/sublime_text
 	precomposeunicode = true	# avoid issues with non-ASCII filenames in OS X <http://stackoverflow.com/questions/5581857>
 
 [fetch]
@@ -72,7 +72,7 @@
 	missingCommitsCheck = warn
 
 [sequence]
-	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/Sublime\\ Text
+	editor = /Applications/Sublime\\ Text.app/Contents/MacOS/sublime_text
 
 [user]
 	name = Matti Schneider
