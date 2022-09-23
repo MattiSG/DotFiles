@@ -80,7 +80,7 @@
 [user]
 	name = Matti Schneider
 	email = gh@mattischneider.fr
-	signingkey = A324AE89D3409C72
+	signingkey = 6751441094D84A98
 
 
 # Use `origin` as the default remote on the `master` branch in all cases
