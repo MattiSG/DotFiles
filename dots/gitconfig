@@ -35,9 +35,9 @@
 
 	# Delete a branch both locally and remotely, possibly taking a named remote as first parameter
 	drop = "!f() { git branch -D ${2:-$1}; git push --delete `[[ $# -gt 1 ]] && echo $1 || echo origin` ${2:-$1}; }; f"
-	
-        # Remove all merged branches
-        cleanup = ! git branch --merged master | grep -v 'master$' | xargs git branch -d
+
+	# Remove all merged branches
+	cleanup = ! git branch --merged | egrep -v '(master|main)' | xargs git branch --delete
 
 	# Synchronize a local branch with the distant one
 	sync = ! git stash && git pull --rebase && git push && git stash pop
