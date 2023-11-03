@@ -8,7 +8,7 @@ pics_list_name=$(date "+%Y-%m-%dT%H-%M-%S").txt
 
 find "$SOURCE" -type f -ctime -$DAYS_PAST | egrep --ignore-case '(jpeg|png|jpg)$' > "$MEMORY/$pics_list_name"
 
-echo -n "Number of pictures added in the last $DAYS_PAST days:"
+echo -n "Number of compressible pictures added in the last $DAYS_PAST days:"
 cat "$MEMORY/$pics_list_name" | wc -l
 
 while [ -n `head -1 "$MEMORY/$pics_list_name"` ]
