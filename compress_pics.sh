@@ -1,14 +1,14 @@
 SOURCE="$HOME/Pictures/Photos.photoslibrary/originals"
-DAYS_PAST=60
+days_past=${DAYS_PAST:-60}
 MEMORY="$HOME/.mattisg_pics_compressor"
 
 mkdir -p "$MEMORY"
 
 pics_list_name=$(date "+%Y-%m-%dT%H-%M-%S").txt
 
-find "$SOURCE" -type f -ctime -$DAYS_PAST | egrep --ignore-case '(jpeg|png|jpg)$' > "$MEMORY/$pics_list_name"
+find "$SOURCE" -type f -ctime -$days_past | egrep --ignore-case '(jpeg|png|jpg)$' > "$MEMORY/$pics_list_name"
 
-echo -n "Number of compressible pictures added in the last $DAYS_PAST days:"
+echo -n "Number of compressible pictures added in the last $days_past days:"
 cat "$MEMORY/$pics_list_name" | wc -l
 
 while [ -n `head -1 "$MEMORY/$pics_list_name"` ]
@@ -19,5 +19,5 @@ do
 	echo -n .
 done
 
-# echo -n "Number of videos added in the last $DAYS_PAST days:"
-# find "$SOURCE" -type f -ctime -$DAYS_PAST | egrep --ignore-case '(mov|mp4)$' | wc -l
+# echo -n "Number of videos added in the last $days_past days:"
+# find "$SOURCE" -type f -ctime -$days_past | egrep --ignore-case '(mov|mp4)$' | wc -l
