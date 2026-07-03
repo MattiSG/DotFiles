@@ -11,7 +11,7 @@ user() {
 
 host() {
 	echo -n $boldon
-	if [[ $HOSTNAME == "MS-Laptop.local" ]]
+	if [[ $HOSTNAME == "MS-Laptop-20.local" ]]
 	then echo -n $greenf"∴"
 	else echo -n " $yellowf$HOSTNAME"
 	fi
