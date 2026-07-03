@@ -2,7 +2,7 @@ source $(dirname "$BASH_SOURCE")/../lib/MSGShellUtils/ui.sh
 
 user() {
 	echo -n $boldon
-	if [[ $USER == "matti" ]]
+	if ps -o ppid= -p $$ | xargs ps -o ppid= | xargs ps -o comm= | grep -q Terminal  # get the grandparent process name of the current shell and check if it is Terminal (to detect main Terminal.app sessions on macOS); alternative if logged in from another user would be '-bash'
 	then echo -n $greenf"∵"
 	else echo -n "$redf$USER"
 	fi
